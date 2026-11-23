@@ -1,1 +1,1 @@
-# numbers-guessing-game-error-copy
+# rock-paper-scissors-game-project

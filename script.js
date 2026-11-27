@@ -42,11 +42,28 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame(){
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComuputerChoice();
+
+    playRound(humanSelection, computerSelection)
+}
+
 //init scores
 let humanScore = 0;
 let computerScore = 0;
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComuputerChoice();
+//play five rounds
+for (let i = 0; i < 5; i++){
+    console.log("Round " + (i + 1) + "!");
+    playGame();
+}
 
-playRound(humanSelection, computerSelection)
+//Show a message if you lost or won
+if (humanScore < computerScore) {
+    console.log("You have lost...")
+}else if (humanScore > computerScore){
+    console.log("Congragulations! You won!")
+}else {
+    console.log("Draw!")
+}
